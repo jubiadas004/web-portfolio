@@ -3,7 +3,7 @@
 Welcome to my personal web portfolio! This website showcases my background, skills, and projects as a Computer Science student with a passion for software development and game design.
 
 ## 🌐 Live Website
-You can view the portfolio here!
+You can view the portfolio here: [https://jubiadas004.github.io/web-portfolio/]
 
 ## 📁 Folder Structure
 
