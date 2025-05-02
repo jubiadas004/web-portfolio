@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | James Ubiadas</title>
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- Google Font: Press Start 2P (Retro Gaming Font) -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Star Background -->
+    <canvas id="starCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">James</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="section">
+      <div class="contact__container">
+        <div class="contact__heading">
+          <h1>Contact Me</h1>
+          <p>Have a question or want to work together? Feel free to reach out!</p>
+        </div>
+        
+        <div class="contact__content">
+          <!-- Contact Form -->
+          <div class="contact__form">
+            <form id="contactForm">
+              <div class="form__group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              
+              <div class="form__group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="form__group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              
+              <div class="form__group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              
+              <button type="submit" class="submit__btn">Send Message</button>
+            </form>
+          </div>
+          
+          <!-- Social Links -->
+          <div class="social__links">
+            <h2>Connect With Me</h2>
+            <div class="social__icons">
+              <a href="https://github.com/jubiadas004" class="social__icon" target="_blank">
+                <i class="ri-github-fill"></i>
+                <span>GitHub</span>
+              </a>
+              
+              <a href="https://www.instagram.com/_jubiadas_/" class="social__icon" target="_blank">
+                <i class="ri-instagram-line"></i>
+                <span>Instagram</span>
+              </a>
+              
+              <a href="https://open.spotify.com/user/nez64upng3m6vog5ojb1h2cwb?si=3d06549a095749f0" class="social__icon" target="_blank">
+                <i class="ri-spotify-fill"></i>
+                <span>Spotify</span>
+              </a>
+              
+              <a href="#" class="social__icon discord-icon" id="discordLink">
+                <i class="ri-discord-fill"></i>
+                <span>Discord</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 James Ubiadas. All rights reserved.</p>
+    </footer>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+    <script>
+      // Contact form handling
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Here you would typically add code to send the form data
+        // For now we'll just show an alert
+        alert('Thanks for your message! I will get back to you soon.');
+        this.reset();
+      });
+      
+      // Discord username copy functionality
+      document.getElementById('discordLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        // Copy Discord username to clipboard
+        navigator.clipboard.writeText('jamez9596').then(function() {
+          // Create and show a tooltip
+          let tooltip = document.createElement('div');
+          tooltip.textContent = 'Discord username copied!';
+          tooltip.style.position = 'fixed';
+          tooltip.style.left = event.pageX + 'px';
+          tooltip.style.top = (event.pageY - 40) + 'px';
+          tooltip.style.background = '#ff00c8';
+          tooltip.style.color = 'white';
+          tooltip.style.padding = '8px 12px';
+          tooltip.style.borderRadius = '5px';
+          tooltip.style.fontSize = '0.7rem';
+          tooltip.style.fontFamily = "'Press Start 2P', cursive";
+          tooltip.style.zIndex = '1000';
+          
+          document.body.appendChild(tooltip);
+          
+          // Remove the tooltip after 2 seconds
+          setTimeout(function() {
+            document.body.removeChild(tooltip);
+          }, 2000);
+        }).catch(function() {
+          alert('Failed to copy Discord username to clipboard');
+        });
+      });
+    </script>
+  </body>
+</html>

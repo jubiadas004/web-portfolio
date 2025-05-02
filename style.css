@@ -1,0 +1,571 @@
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive; /* Retro gaming font */
+}
+
+body {
+  background: linear-gradient(135deg, #000000, #0d0d0d, #1a1a1a);
+  color: #00ffea;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden; /* Changed from overflow: hidden to allow vertical scrolling */
+  overflow-y: auto;   /* Explicitly enable vertical scrolling */
+  padding-bottom: 60px; /* Add some bottom padding to prevent content being hidden */
+}
+
+/* ===== Star Canvas ===== */
+#starCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* ===== Navigation Bar ===== */
+nav {
+  background-color: #111;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(0, 255, 234, 0.5);
+}
+
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #00ffea;
+  text-shadow: 0 0 5px #00ffea;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #00ffea;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  color: #ff00c8;
+  text-shadow: 0 0 8px #ff00c8;
+}
+
+/* ===== Hero Section ===== */
+.section {
+  /* Changed from flex: 1 to min-height to allow proper scrolling */
+  min-height: calc(100vh - 200px); /* Subtract approximate header/footer height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px 100px; /* Increased bottom padding */
+  margin-bottom: 20px;
+}
+
+.section__container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .section__container {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.content .subtitle {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff00c8;
+}
+
+.content .title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00ffea;
+}
+
+.content .title span {
+  color: #ff00c8;
+}
+
+.content .description {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.action__btns {
+  display: flex;
+  gap: 20px;
+}
+
+.action__btns a {
+  padding: 12px 24px;
+  border: 2px solid #00ffea;
+  background: transparent;
+  color: #00ffea;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.action__btns a:hover {
+  background: #ff00c8;
+  border-color: #ff00c8;
+  color: #fff;
+}
+
+/* ===== Profile Image ===== */
+.image img {
+  width: 250px;
+  height: 250px;
+  border: 4px solid #00ffea;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px #00ffea;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 20px 0;
+  color: #666;
+  font-size: 0.8rem;
+  border-top: 1px solid #333;
+  position: relative; /* Changed from static to ensure proper positioning */
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* ===== Projects Page ===== */
+.projects__grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project__card {
+  background-color: #1a1a1a;
+  border: 2px solid #00ffea;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 15px #00ffea;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff00c8;
+}
+
+.project__card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ff00c8;
+}
+
+.project__card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #cccccc;
+}
+
+/* ===== Contact Page Styles ===== */
+.contact__container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact__heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact__heading h1 {
+  font-size: 2rem;
+  color: #00ffea;
+  margin-bottom: 15px;
+}
+
+.contact__heading p {
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+.contact__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 40px; /* Added to ensure space between content and footer */
+}
+
+@media (min-width: 768px) {
+  .contact__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Contact Form */
+.contact__form {
+  background-color: #1a1a1a;
+  border: 2px solid #00ffea;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 0 15px #00ffea;
+}
+
+.form__group {
+  margin-bottom: 20px;
+}
+
+.form__group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff00c8;
+  font-size: 0.8rem;
+}
+
+.form__group input,
+.form__group textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #111;
+  border: 1px solid #333;
+  color: #00ffea;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+.form__group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+  outline: none;
+  border-color: #ff00c8;
+  box-shadow: 0 0 8px rgba(255, 0, 200, 0.5);
+}
+
+.submit__btn {
+  padding: 12px 24px;
+  background-color: transparent;
+  border: 2px solid #00ffea;
+  color: #00ffea;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+  margin-bottom: 10px; /* Added to ensure button is fully visible */
+}
+
+.submit__btn:hover {
+  background-color: #ff00c8;
+  border-color: #ff00c8;
+  color: #fff;
+}
+
+/* Social Links */
+.social__links {
+  background-color: #1a1a1a;
+  border: 2px solid #00ffea;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 0 15px #00ffea;
+}
+
+.social__links h2 {
+  font-size: 1.2rem;
+  color: #ff00c8;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.social__icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.social__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.social__icon:hover {
+  background-color: #111;
+  transform: translateY(-5px);
+}
+
+.social__icon i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #00ffea;
+}
+
+.social__icon span {
+  color: #cccccc;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.social__icon:hover i {
+  color: #ff00c8;
+}
+
+/* Ensure mobile compatibility */
+html, body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* About Page Styles */
+.about__container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about__heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about__heading h1 {
+  font-size: 2rem;
+  color: #00ffea;
+  margin-bottom: 15px;
+}
+
+.about__heading p {
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+.about__section {
+  background-color: #1a1a1a;
+  border: 2px solid #00ffea;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 0 15px #00ffea;
+  margin-bottom: 30px;
+}
+
+.about__section h2 {
+  font-size: 1.2rem;
+  color: #ff00c8;
+  margin-bottom: 15px;
+}
+
+.about__section p {
+  color: #cccccc;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.about__section strong {
+  color: #00ffea;
+}
+
+.about__section ul {
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.about__section ul li {
+  color: #cccccc;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+/* General Page Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #00ffea;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff00c8;
+}
+
+/* Profile and Hobbies Images */
+.profile__image {
+  width: 250px; /* Adjusted size */
+  height: 250px; /* Adjusted size */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;
+  border: none; /* Removed border */
+  box-shadow: 0 0 15px #00ffea; /* Optional: add a glowing effect around the image */
+}
+
+/* Hobbies Images */
+.hobbies__image {
+  width: 100%;
+  max-height: 400px; /* Increased height for better display */
+  object-fit: contain;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* Hobbies & Interests Image Gallery */
+.photo__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two images per row */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .photo__gallery {
+    grid-template-columns: repeat(1, 1fr); /* One image per row on smaller screens */
+  }
+}
+
+/* Skills Grid */
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .skills__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skill__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #111;
+  padding: 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.skill__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #ff00c8;
+}
+
+.skill__item i {
+  font-size: 1.8rem;
+  color: #00ffea;
+  margin-bottom: 10px;
+}
+
+.skill__item span {
+  color: #cccccc;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+/* Photo Gallery */
+.photo__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .photo__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .photo__gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gallery__item {
+  border: 2px solid #00ffea;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 255, 234, 0.3);
+  transition: 0.3s;
+}
+
+.gallery__item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #ff00c8;
+  border-color: #ff00c8;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Resume Section */
+.resume__section {
+  text-align: center;
+}
+
+.resume__section .action__btns {
+  justify-content: center;
+  margin-top: 20px;
+}

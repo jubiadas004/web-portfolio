@@ -1,0 +1,56 @@
+#clock {
+    height: 200px;
+    width: 200px;
+    border: 5px solid black;
+    border-radius: 100%;
+    position: relative;
+}
+
+.hand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: top;
+}
+
+#hrs {
+    width: 3px;
+    height: 40px;
+    background-color: red;
+}
+
+#mnt {
+    width: 2px;
+    height: 50px;
+    background-color: blue;
+}
+
+#scd {
+    width: 1px;
+    height: 60px;
+    background-color: rgb(21, 255, 0);
+}
+
+/* Tick Marks */
+.tick {
+    width: 4px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+}
+
+/* Center Dot */
+#center-dot {
+    width: 10px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
