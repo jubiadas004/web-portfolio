@@ -3,8 +3,7 @@
 Welcome to my personal web portfolio! This website showcases my background, skills, and projects as a Computer Science student with a passion for software development and game design.
 
 ## 🌐 Live Website
-You can view the portfolio here: [https://jubiadas004.github.io](https://jubiadas004.github.io)  
-_(Replace `yourusername` with your actual GitHub username once published)_
+You can view the portfolio here!
 
 ## 📁 Folder Structure
 
@@ -35,14 +34,9 @@ I'm James Ubiadas, a 3rd-year Computer Science major at Cal State Fullerton. I e
 
 ## 🚀 Setup & Deployment
 1. Clone the repository  
-   `git clone https://github.com/jubiadas004/your-repo-name.git`
 2. Open the folder in your editor
 3. Edit as needed, then push changes to GitHub
 4. Enable GitHub Pages in the repository settings
 
 ## 📩 Contact
 If you'd like to collaborate or connect, reach out via the contact form on the website.
-
----
-
-Feel free to customize any part, especially the GitHub URL or features list. Want me to drop this into your actual project as a file?
