@@ -52,6 +52,6 @@ To run this project locally or update it:
 
 1. **Clone this repository**  
    ```bash
-- git clone https://github.com/jubiadas004/web-portfolio.git
+   git clone https://github.com/jubiadas004/web-portfolio.git
 - cd your-repo-name
 - open index.html
