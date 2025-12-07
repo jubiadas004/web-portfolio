@@ -11,17 +11,6 @@ You can view the portfolio here:
 
 ---
 
-## 📁 Folder Structure
-├── index.html # Home page
-├── about.html # About Me page
-├── projects.html # Projects showcase
-├── contact.html # Contact form and social links
-├── style.css # Main stylesheet with retro/neon design
-├── images/ # Profile picture and project-related images
-└── README.md # This file
-
----
-
 ## 🎯 Features
 - Clean, retro-styled UI with dark background and neon highlights  
 - Responsive design for mobile and desktop  
